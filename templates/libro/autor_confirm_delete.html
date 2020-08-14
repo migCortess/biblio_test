@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block title %}
+  Biblioteca | Listado de Autores
+{% endblock title %}
+{% block body %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <p><strong>¿Desea Elminar el Autor {{ object }}?</strong></p>
+            <button class="btn btn-danger" type="submit">Confirmar</button>
+        </form>
+
+{% endblock body %}

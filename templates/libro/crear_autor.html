@@ -12,10 +12,11 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="{% url 'libro:crear_autor' %}" method="POST">
+        <form method="POST" action="{% url 'libro:crear_autor' %}" > 
+
             {% csrf_token %}
             <div class="modal-body">
-                {{ autor_form.as_p }}
+                {{ form.as_p }}
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
